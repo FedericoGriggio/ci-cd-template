@@ -14,20 +14,6 @@ jobs:
 
     steps:
 
-    - name: Check for GPU
-      run: |
-        echo "Checking GPU availability..."
-        lspci | grep -i nvidia || echo "No NVIDIA GPU detected."
-
-    - name: Display system information
-      run: |
-        echo "CPU Info:"
-        lscpu
-        echo "Memory Info:"
-        free -h
-        echo "Disk Info:"
-        df -h
-
     # 1. Checkout to the branch that triggered the event
     - uses: actions/checkout@v3
 
