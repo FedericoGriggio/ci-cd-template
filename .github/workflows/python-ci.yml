@@ -13,6 +13,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Display system information
+      run: |
+        echo "CPU Info:"
+        lscpu
+        echo "Memory Info:"
+        free -h
+        echo "Disk Info:"
+        df -h
+
     # 1. Checkout to the branch that triggered the event
     - uses: actions/checkout@v3
 
