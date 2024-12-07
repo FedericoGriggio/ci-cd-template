@@ -14,6 +14,11 @@ jobs:
 
     steps:
 
+    - name: Check for GPU
+      run: |
+        echo "Checking GPU availability..."
+        lspci | grep -i nvidia || echo "No NVIDIA GPU detected."
+
     - name: Display system information
       run: |
         echo "CPU Info:"
