@@ -15,7 +15,7 @@ app.add_middleware(
 @app.get('/')
 def root():
     response = {
-        'greeting': 'Buongiorno a tutti !! ☀️',    # This is a typical Italian greeting ;)
+        'greeting': 'Buongiorno a tutti !! ☀️👋',    # This is a typical Italian greeting ;)
     }
 
     return response
